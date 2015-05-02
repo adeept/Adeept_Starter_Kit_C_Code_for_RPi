@@ -1,2 +1,8 @@
-# Adeept_Starter_Kit_C_Code_for_RPi
-Adeept Starter Kit C Code for Raspberry Pi
+## Adeept Starter Kit Code for Raspberry Pi with C language
+
+### About this kit:
+	Adeept Starter kit is ...,
+
+### Adbout Adeept:
+	Adeept is a..., aim to...
+
