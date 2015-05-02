@@ -1,3 +1,11 @@
+/*
+* File name   : 03_btnAndLed.c
+* Description : Toggle a led by button.
+* Website     : www.adeept.com
+* E-mail      : support@adeept.com
+* Author      : Jason
+* Date        : 2015/05/02
+*/
 #include <wiringPi.h>
 #include <stdio.h>
 
