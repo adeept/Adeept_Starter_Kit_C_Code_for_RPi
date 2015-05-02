@@ -6,3 +6,8 @@
 ### Adbout Adeept:
 	Adeept is a..., aim to...
 
+Website:
+	www.adeept.com
+
+E-mail:
+	support@adeept.com
