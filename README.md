@@ -3,7 +3,7 @@
 ### About this kit:
 	Adeept Starter kit is ...,
 
-### Adbout Adeept:
+### About Adeept:
 	Adeept is a..., aim to...
 
 Website:
