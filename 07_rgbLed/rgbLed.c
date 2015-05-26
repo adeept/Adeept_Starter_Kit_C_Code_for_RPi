@@ -1,3 +1,11 @@
+/*
+* File name   : rgbLed.c
+* Description : 
+* Website     : www.adeept.com
+* E-mail      : support@adeept.com
+* Author      : Jason
+* Date        : 2015/05/26
+*/
 #include <wiringPi.h>
 #include <softPwm.h>
 #include <stdio.h>
@@ -26,11 +34,10 @@ int main(void)
 {
 	int i;
 
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
+	if(wiringPiSetup() == -1){ //when initialize wiringPi failed,print message to screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
-	//printf("linker LedPin : GPIO %d(wiringPi pin)\n",LedPin); //when initialize wiring successfully,print message to screen
 
 	ledInit();
 

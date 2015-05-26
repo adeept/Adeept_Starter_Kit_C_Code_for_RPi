@@ -1,5 +1,5 @@
 /*
-* File name   : 02_buzzer.c
+* File name   : buzzer.c
 * Description : Make an active buzzer sound.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com

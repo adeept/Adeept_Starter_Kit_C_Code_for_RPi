@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print messa    geto screen
+	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print messa    ge to screen
     	printf("setup wiringPi failed !\n");
     	return -1;
     }

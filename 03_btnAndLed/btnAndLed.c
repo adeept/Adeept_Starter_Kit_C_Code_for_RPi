@@ -1,5 +1,5 @@
 /*
-* File name   : 03_btnAndLed.c
+* File name   : btnAndLed.c
 * Description : Toggle a led by button.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
@@ -14,9 +14,9 @@
 
 int main(void)
 {
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
+	if(wiringPiSetup() == -1){ //when initialize wiring failed,print message to screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
 	
 	pinMode(LedPin, OUTPUT); 

@@ -1,5 +1,5 @@
 /*
-* File name   : 06_breathingLed.c
+* File name   : breathingLed.c
 * Description : ...
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
@@ -15,9 +15,9 @@ int main(void)
 {
 	int i;
 
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
+	if(wiringPiSetup() == -1){ //when initialize wiring failed,print message to screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
 	
 	pinMode(LedPin, PWM_OUTPUT);//pwm output mode

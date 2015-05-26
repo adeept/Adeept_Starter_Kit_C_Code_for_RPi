@@ -1,5 +1,5 @@
 /*
-* File name   : 01_blinkingLed.c
+* File name   : blinkingLed.c
 * Description : Make an led blinking.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
@@ -13,7 +13,7 @@
 
 int main(void)
 {
-	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print messageto screen
+	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print message to screen
 		printf("setup wiringPi failed !\n");
 		return -1; 
 	}

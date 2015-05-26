@@ -1,5 +1,5 @@
 /*
-* File name   : 05_flowingLed.c
+* File name   : flowingLed.c
 * Description : ...
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
@@ -25,13 +25,9 @@ int main(void)
 {
 	int i;
 
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
-	}
-
-	for(i=0;i<8;i++){
-		printf("linker LedPin : GPIO %d(wiringPi pin)\n",i); //when initialize wiring successfully,print message to screen
+	if(wiringPiSetup() == -1){ //when initialize wiring failed,print message to screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
 
 	for(i=0;i<8;i++){       //make 8 pins' mode is output

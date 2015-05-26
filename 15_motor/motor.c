@@ -1,3 +1,11 @@
+/*
+* File name   : motor.c
+* Description : .
+* Website     : www.adeept.com
+* E-mail      : support@adeept.com
+* Author      : Jason
+* Date        : 2015/05/02
+*/
 #include <wiringPi.h>
 #include <stdio.h>
 
@@ -7,9 +15,9 @@
 
 int main(void)
 {
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
+	if(wiringPiSetup() == -1){ //when initialize wiring failed,print message to screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
 	
 	pinMode(MotorPin1, OUTPUT);
