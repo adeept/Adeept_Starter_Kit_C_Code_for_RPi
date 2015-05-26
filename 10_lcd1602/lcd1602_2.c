@@ -11,8 +11,8 @@
 #include <wiringPi.h>
 #include <lcd.h>
 
-const unsigned char Buf[] = "---SUNFOUNDER---";
-const unsigned char myBuf[] = "  sunfounder.com";
+const unsigned char Buf[] = "---Adeept---";
+const unsigned char myBuf[] = "  adeept.com";
 
 int main(void)
 {
@@ -35,7 +35,7 @@ int main(void)
 	lcdPuts(fd, "Welcom To--->");
 
 	lcdPosition(fd, 0, 1); 
-	lcdPuts(fd, "  sunfounder.com");
+	lcdPuts(fd, "  adeept.com");
 
 	sleep(1);
 //	lcdClear(fd);

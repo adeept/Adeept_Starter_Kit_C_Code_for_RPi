@@ -1,6 +1,6 @@
 /*
 * File name   : timer555.c
-* Description : Make an led blinking.
+* Description : .
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason

@@ -56,8 +56,8 @@ int main(void)
 {
 	int i;
 
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
+	if(wiringPiSetup() == -1){ //when initialize wiringPi failed,print message to screen
+		printf("setup wiringPi failed !\n");
 		return 1; 
 	}
 

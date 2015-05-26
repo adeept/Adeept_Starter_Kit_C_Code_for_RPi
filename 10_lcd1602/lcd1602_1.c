@@ -46,6 +46,7 @@ int main(int args, char *argv[])
 	float Temp;
 	
 	if(wiringPiSetup() == -1){
+		printf("wiringPi setup failed !\n");
 		exit(1);
 	}
 	
