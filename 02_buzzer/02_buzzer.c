@@ -1,6 +1,6 @@
 /*
 * File name   : 02_buzzer.c
-* Description : ...
+* Description : Make an active buzzer sound.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
@@ -15,7 +15,7 @@ int main(void)
 {
 	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print message to screen
 		printf("setup wiringPi failed !");
-		return 1; 
+		return -1; 
 	}
 	
 	pinMode(BeepPin, OUTPUT);   //set GPIO0 output
