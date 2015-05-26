@@ -1,7 +1,8 @@
 ### Adeept Starter Kit Code for Raspberry Pi with C language
+-----------------------------------------------------------------------------
 
 #### About this kit:
-Adeept Starter kit is ...,
+This is an entry-level learning kit for Raspberry Pi. Some common electronic components and sensors are included. Through the learning, you will get a better understanding of Raspberry Pi, and be able to make fascinating works based on Raspberry Pi.
 
 -----------------------------------------------------------------------------
 #### About Adeept:
