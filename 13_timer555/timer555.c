@@ -23,16 +23,16 @@ void exInt0_ISR(void)  //GPIO0 interrupt service routine
 
 int main (void)
 {
-  if(wiringPiSetup() < 0){
-  	fprintf(stderr, "Unable to setup wiringPi:%s\n",strerror(errno));
-	return 1;
-  }
+	if(wiringPiSetup() < 0){
+  		fprintf(stderr, "Unable to setup wiringPi:%s\n",strerror(errno));
+		return 1;
+    }
 
-  wiringPiISR(Pin0, INT_EDGE_FALLING, &exInt0_ISR);
+	wiringPiISR(Pin0, INT_EDGE_FALLING, &exInt0_ISR);
 
-   while(1){
-	printf("Current pluse number is : %d\n", globalCounter);
-  }
+    while(1){
+		printf("Current pluse number is : %d\n", globalCounter);
+  	}
 
-  return 0;
+  	return 0;
 }
