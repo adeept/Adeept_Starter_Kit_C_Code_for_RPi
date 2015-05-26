@@ -1,6 +1,6 @@
 /*
 * File name   : 01_blinkingLed.c
-* Description : Make a led blinking.
+* Description : Make an led blinking.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
@@ -13,21 +13,20 @@
 
 int main(void)
 {
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print messageto screen
-		printf("setup wiringPi failed !");
-		return 1; 
+	if(wiringPiSetup() == -1){ //when initialize wiringPi failed, print messageto screen
+		printf("setup wiringPi failed !\n");
+		return -1; 
 	}
-	printf("linker LedPin : GPIO %d(wiringPi pin)\n",LedPin); //when initialize wiring successfully,print message to screen
 	
 	pinMode(LedPin, OUTPUT);
 
 	while(1){
-			digitalWrite(LedPin, LOW);  //led on
-			printf("led on...\n");
-			delay(500);
-			digitalWrite(LedPin, HIGH);  //led off
-			printf("...led off\n");
-			delay(500);
+		digitalWrite(LedPin, LOW);   //led on
+		printf("led on...\n");
+		delay(500);
+		digitalWrite(LedPin, HIGH);  //led off
+		printf("...led off\n");
+		delay(500);
 	}
 
 	return 0;
