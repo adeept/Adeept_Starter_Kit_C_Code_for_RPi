@@ -1,6 +1,6 @@
 /*
-* File name   : led1602_2.c
-* Description : .
+* File name   : lcd1602_2.c
+* Description : lcd1602 display
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
