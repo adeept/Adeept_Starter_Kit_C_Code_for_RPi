@@ -16,17 +16,17 @@ int main(void)
 	int i;
 	int bit;
 
-	if(wiringPiSetup() == -1){
-		printf("wiringPi setup error!\n");
+	if(wiringPiSetup() < 0){
+		printf("wiringPi setup failed !\n");
 		return -1;
 	}
 
-	sr595Setup(100, 10, 0, 2, 1);
+	sr595Setup(100, 10, 2, 1, 0);
 
 	while(1){
-		for(i = 0; i < sizeof(seg); i++){
+		for(i = 0; i < sizeof(SegCode); i++){
 			for(bit = 0; bit < 8; bit++){
-				digitalWrite(100+bit, seg[i] & (1<<bit));
+				digitalWrite(100+bit, SegCode[i] & (1<<bit));
 				delay(1);
 			}	
 			delay(500);
