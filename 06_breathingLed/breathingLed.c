@@ -1,6 +1,6 @@
 /*
 * File name   : breathingLed.c
-* Description : ...
+* Description : control the brightness of led by PWM.
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
@@ -15,7 +15,7 @@ int main(void)
 {
 	int i;
 
-	if(wiringPiSetup() == -1){ //when initialize wiring failed,print message to screen
+	if(wiringPiSetup() < 0){ //when initialize wiringPi failed, print message to screen
 		printf("setup wiringPi failed !\n");
 		return -1; 
 	}
