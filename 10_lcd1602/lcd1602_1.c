@@ -50,7 +50,7 @@ int main(int args, char *argv[])
 		exit(1);
 	}
 	
-	fd = lcdInit(2, 16, 4,  15,16 , 0,1,2,3,4,5,6,7); //see /usr/local/include/lcd.h
+	fd = lcdInit(2,16,4, 5,4, 0,1,2,3,4,5,6,7); //see /usr/local/include/lcd.h
 	if (fd == -1){
 		printf ("lcdInit 1 failed\n") ;
 		return 1;
