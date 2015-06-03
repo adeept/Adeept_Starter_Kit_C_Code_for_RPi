@@ -1,10 +1,10 @@
 /*
 * File name   : ledMatrix.c
-* Description : .
+* Description : display 0,1,Adeept
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
-* Date        : 2015/05/02
+* Date        : 2015/06/03
 */
 #include <wiringPi.h>
 #include <stdio.h>
