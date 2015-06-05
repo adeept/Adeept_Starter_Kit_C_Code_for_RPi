@@ -1,6 +1,6 @@
 /*
 * File name   : motor.c
-* Description : controlling a 5V DCmotor
+* Description : controlling a 5V DC motor
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
 * Author      : Jason
@@ -20,6 +20,10 @@
     
 #define STATUS_LED         16
 
+int g_sta  = 1;
+int g_dir  = 1;
+int speed  = 50;
+
 void motor(int status, int dir, int speed)
 {
 	if(1 == status){//run
@@ -38,13 +42,58 @@ void motor(int status, int dir, int speed)
 	}	
 }
 
+void buttonScan(void)
+{
+	if(digitalRead(BTN_RUN_STOP) == 0){
+		delay(10);
+		if(digitalRead(BTN_RUN_STOP) == 0){
+			g_sta = !g_sta;
+			printf("g_sta = %d\n", g_sta);
+		}
+		while(!digitalRead(BTN_RUN_STOP));
+	}
+	
+	if(digitalRead(BTN_DIRECTION) == 0){
+		delay(10);
+		if(digitalRead(BTN_DIRECTION) == 0){
+			g_dir = !g_dir;
+			printf("g_dir = %d\n", g_dir);
+		}
+		while(!digitalRead(BTN_DIRECTION));
+	}
+	
+	if(digitalRead(BTN_SPEED_INCREASE) == 0){
+		delay(10);
+		if(digitalRead(BTN_SPEED_INCREASE) == 0){
+			speed++;
+			if(speed > 100){
+				speed = 100;		
+			}
+			printf("speed = %d\n", speed);
+		}
+		while(!digitalRead(BTN_SPEED_INCREASE));
+	}
+	
+	if(digitalRead(BTN_SPEED_DECREASE) == 0){
+		delay(10);
+		if(digitalRead(BTN_SPEED_DECREASE) == 0){
+			speed--;
+			if(speed < 0){
+				speed = 0;		
+			}
+			printf("speed = %d\n", speed);
+		}
+		while(!digitalRead(BTN_SPEED_DECREASE));
+	}
+}
+
 int main(void)
 {
 	if(wiringPiSetup() == -1){
 		printf("setup wiringPi failed !\n");
 		return -1; 
 	}
-	
+
 	pinMode(MotorPin_A, OUTPUT);
 	pinMode(MotorPin_B, OUTPUT);
 	pinMode(STATUS_LED, OUTPUT);
@@ -62,19 +111,8 @@ int main(void)
 	softPwmCreate(MotorPin_B, 0, 100);
 
 	while(1){
-		motor(1, 1, 20);
-		delay(3000);
-		motor(1, 1, 50);
-		delay(3000);
-		motor(1, 1, 100);
-		delay(8000);
-		
-		motor(1, 0, 20);
-		delay(3000);
-		motor(1, 0, 50);
-		delay(3000);
-		motor(1, 0, 100);
-		delay(8000);
+		buttonScan();
+		motor(g_sta, g_dir, speed);
 	}
 
 	return 0;
