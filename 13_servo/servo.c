@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <wiringPi.h>
-#include <unistd.h>
 
 #define  Servo  0
 
