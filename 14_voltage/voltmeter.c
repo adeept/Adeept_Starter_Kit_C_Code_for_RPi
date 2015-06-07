@@ -1,5 +1,5 @@
 /*
-* File name   : voltage.c
+* File name   : voltmeter.c
 * Description : a simple voltmeter
 * Website     : www.adeept.com
 * E-mail      : support@adeept.com
