@@ -2,7 +2,10 @@
 -----------------------------------------------------------------------------
 
 #### About this kit:
-This is an entry-level learning kit for Raspberry Pi. Some common electronic components and sensors are included. Through the learning, you will get a better understanding of Raspberry Pi, and be able to make fascinating works based on Raspberry Pi.
+This is an entry-level learning kit for Raspberry Pi. Some common electronic components and sensors are included. We also carefully prepared a user manual(64 pages PDF) for you. Through the learning, you will get a better understanding of Raspberry Pi, and be able to make fascinating works based on Raspberry Pi.
+
+Now, the kit has been released, you can buy it from our ebay shop:
+	http://www.ebay.com/itm/Super-Starter-Kit-for-Raspberry-Pi-2-model-B-B-Python-LCD1602-Servo-Adeept-/321782602254?pt=LH_DefaultDomain_0&hash=item4aebbcda0e
 
 -----------------------------------------------------------------------------
 #### About Adeept:
